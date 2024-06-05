@@ -1,0 +1,31 @@
+
+Q. What is DevOps? 
+Ans:: DevOps is a set of practices, tools, and a cultural philosophy that automate and integrate the processes between software development and IT teams.
+It emphasizes team empowerment, cross-team communication and collaboration, and technology automation. 
+
+Q. Cycle of DevOps?
+Ans:: DevOps Lifecycle is the set of phases that includes DevOps for taking part in Development and Operation group duties for quicker software program delivery. 
+DevOps follows positive techniques that consist of code, building, testing, releasing, deploying, operating, displaying, and planning. 
+DevOps lifecycle follows a range of phases such as non-stop development, non-stop integration, non-stop testing, non-stop monitoring, and non-stop feedback.
+Each segment of the DevOps lifecycle is related to some equipment and applied sciences to obtain the process.
+Some of the frequently used tools are open source and are carried out primarily based on commercial enterprise requirements. 
+DevOps lifecycle is effortless to manipulate and it helps satisfactory delivery. 
+7 Cs of DevOps 
+1.Continuous Development
+2.Continuous Integration
+3.Continuous Testing
+4.Continuous Deployment/Continuous Delivery
+5.Continuous Monitoring
+6.Continuous Feedback
+7.Continuous Operations
+
+Q. what is monolithic architecture and microservices?
+Ans::  A monolithic architecture is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from 
+other applications. The word “monolith” is often attributed to something large and glacial, 
+which isn’t far from the truth of a monolith architecture for software design. A monolithic architecture is a singular, 
+large computing network with one code base that couples all of the business concerns together.  To make a change to this sort of application
+requires updating the entire stack by accessing the code base and building and deploying an updated version of the service-side interface.
+This makes updates restrictive and time-consuming. 
+
+Q. what is services in Devops?
+Ans: DevOps as a service relies on infrastructure-as-code to quickly replace and address issues with virtual infrastructure.
