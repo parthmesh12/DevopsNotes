@@ -1,0 +1,65 @@
+Docker:-
+Docker is a set of platform as a service products that use OS-level virtualization to 
+deliver software in packages called containers. The service has both free and 
+premium tiers. The software that hosts the containers is called Docker Engine. It was 
+first released in 2013 and is developed by Docker, Inc.
+
+What is container?
+container provides isolated environment to run an application. container contains everything needed to run an application –code, 
+dependencies, version and libraries.
+• Containers:
+• Share the host OS kernel.
+• Lightweight and fast to start.
+• Suitable for micro services and modern cloud applications.
+• Virtual Machines (VMs):
+• Include a full OS with its own kernel.
+• More resource-intensive and slower to start.
+• Useful for running multiple different os on a single host
+
+Why use Docker?
+Using Docker can help you ship your code faster, gives you control over your applications. 
+You can deploy applications on containers that make it easier for them to be 
+deployed, scaled, perform rollbacks and identify issues.
+
+1.Docker Engine: The runtime that executes and manages containers on a host operating system. 
+It consists of the Docker daemon (dockerd), which manages Docker objects 
+(images, containers, networks, and volumes), and the Docker CLI, which allows 
+users to interact with the Docker daemon.
+
+2. Docker client: is the primary way to interact with Docker. Docker client can 
+communicate with multiple daemon 
+
+3. Docker Daemon: It listen of Docker API request and manages docker object 
+such as images, containers, and network. A daemon can also communicate 
+with other daemons to manage Docker services.
+It is responsible for building, running, and managing Docker containers.
+
+4. Docker registries: Docker registry stores Docker images. Docker Hub is a 
+public registry that anyone can use, and Docker looks for images on Docker 
+Hub by default.
+
+What is docker file?
+Docker can build images automatically by reading the instructions from a 
+Dockerfile.
+A Dockerfile is a text document that contains all the commands a user could 
+call on the command line to assemble an image.
+
+Commands :-
+Docker container ls :- it shows running container list
+Docker container run ubuntu
+Docker container ls -a
+Docker container ls == docker ps
+Docker container rm [container id (first 2 r 3 words required onl)] (we can delete multiple container 
+at once by define container ids)
+Docker container start [container id]
+Docker container stop [container id]
+Docker container run -d ubuntu [-d for detach]
+Docker container run -it ubuntu /bin/bash :- to enter a running container
+Docker container ls -aq :- it shows the all containers ids 
+Docker container rm $(docker container ls -aq) :- it deletes all containers at once
+Docker container run -d nginx
+Sudo docker container inspect [img id] 
+Docker container logs [id] :- it shows logs
+Docker container top [container id] :- it shows processes inside a container 
+Docker container inspect [imgb id] :- to inspect container and network configuration settings
+Docker container ststs :- list all container memory utilizatio
