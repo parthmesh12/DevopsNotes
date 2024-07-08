@@ -1,0 +1,117 @@
+# Display all the resources in kubernetes.
+$ kubectl get all
+
+# Displays all namespaces.
+$ kubectl get namespace
+
+# Display the pods with particular namespace.
+$ kubectl get pods -n <namespace>
+
+# Creating a new namespace
+$ kubectl create namespace <new name>
+
+# create a pod with imperative method
+$ kubeclt run <pod name> --image=<image name> --restart=Never        
+--resart=Never    : pod will not restart autoamtically.
+
+#create a pod yaml file with imperative method, without making changes to the cluster and without creating a pod
+$ kubeclt run <pod name> --image=<image name> --restart=Never --dry-run=client -o yaml > pod.yaml
+--resart=Never    : pod will not restart autoamtically.
+--dry-run=client   : Simulates the command execution without making any changes to the cluster.
+-o yaml > pod.yaml : we will get yaml file.
+
+# Creating a pod with lables
+$ kubectl run <pod name> --image=nginx --restart=Never --labels="app=myapp,env=production"
+
+# Attaching a label to existing pod 
+$ kubectl label <pod name> <app=mydevopl>
+
+
+# creating a resources with yaml file
+$ kubectl apply -f <yaml file>
+
+# Displays all the pods
+$ kubectl get pods
+
+# Display the pods with all labels
+$ kubectl get pods --show-labels
+
+# Display the pods with specific labels
+$ kubectl get pods -l <label name>        .....label should be key=value eg: app=mydep
+ 
+ # Dipslay the logs of pod
+ $ kubectl logs <pod name> 
+
+# Delete the pod
+$ kubectl delete pods <pod name>
+
+# Delete the pod with specific labels
+$ kubectl delete pods -l <label name>                 .....label should be key=value eg: app=mydep
+ 
+# Display the pod with addition information.
+$ kubectl get pods -o wide.
+
+# Display the deployment 
+$ kubectl get deployment 
+
+# creating a deployment with imperative format and replicas of pod.
+$ kubectl create deployment <deployment name> --image=nginx --replicas=3
+
+# Creating a deployment, replicas of pod and expose a port
+$ kubectl create deployment <deployment name> --image=nginx --replicas=3 --port=80
+
+# Attaching a label to existing deployment
+$ kubectl label deployment <deployment name> <label>     .....label should be key=value eg: app=mydep
+ 
+# Removing a label from deployment
+$ kubectl label deployment <deployment name> <label->
+
+# Scaling replicas up and down.
+$ kubectl scale deployment <deployment-name> --replicas=<number-of-replicas>
+
+# To check history of rollingout
+$ kubectl rollout history deployment <deployment name>
+
+# Rollingback to previous version
+$ kubectl rollout undo deployment <deployment name>
+
+# Rollingback to specific version
+$ kubectl rollout undo deployment <deployment name> --to-revision=<revision number>
+
+# Display the replicaSet
+$ kubectl get rs
+
+# creating a replicaset with imperative format
+$ kubectl create replicaset <repliac name> --image=<image> --replicas=<number>
+
+# creating a service
+$ kubectl expose <resource-type> <resource-name> --port=<port> [--target-port=<target-port>] [--type=<service-type>]
+resource-type : deployment, pod, etc
+service-type: ClusterIP, Nodeport, LoadBalancing
+
+# Display the service
+$ k get service -o wide
+
+# Applying a taint to node and taint_effect
+$ kubectl taint nodes <node name> key=value:<taint_effect>
+
+# Remove a taint to node and taint_effect
+$ kubectl taint nodes <node name> key=value:<taint_effect>-
+
+# Describe the node and see the Taint
+$ kubectl describe nodes <node name> | grep Taint
+
+#Apply the toleration to POD using yaml file
+	kind: Pod
+	apiVersion: v1
+	metadata:
+	  name: mypod
+	spec:
+	  containers:
+	  - name: nginx
+	    image: nginx
+	  tolerations:
+	  - key: "key1"
+	    operator: "Equal"
+	    value: "value1"
+	    effect: "NoSchedule"
