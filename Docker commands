@@ -1,0 +1,19 @@
+Commands :-
+Docker container ls :- it shows running container list
+Docker container run ubuntu
+Docker container ls -a
+Docker container ls == docker ps
+Docker container rm [container id (first 2 r 3 words required onl)] (we can delete multiple container 
+at once by define container ids)
+Docker container start [container id]
+Docker container stop [container id]
+Docker container run -d ubuntu [-d for detach]
+Docker container run -it ubuntu /bin/bash :- to enter a running container
+Docker container ls -aq :- it shows the all containers ids 
+Docker container rm $(docker container ls -aq) :- it deletes all containers at once
+Docker container run -d nginx
+Sudo docker container inspect [img id] 
+Docker container logs [id] :- it shows logs
+Docker container top [container id] :- it shows processes inside a container 
+Docker container inspect [imgb id] :- to inspect container and network configuration settings
+Docker container ststs :- list all container memory utilizatio
