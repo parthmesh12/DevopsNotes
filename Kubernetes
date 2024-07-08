@@ -1,1 +1,65 @@
 what is kubernetes
+Deployment:-
+A deployment ensure that a specified number of pod replicas are running at any given time. It can also be used to roll out updates to applications.
+
+Apiversion:- The version of the kubernetes API to use.
+Kind:- The type of resource deployment.
+Metadata:- Data to help uniquely identify the object, Including a name string.
+template:- The pod template describe the pods that will be created.
+Name:- The name of the Pod.
+Containers:- A list of containers to run within the pod.
+Data:- A set of key-value pairs representing the configuration data.
+Spec.replicas: Sets the desired number of pods 
+
+Service:-
+In kubernetes, a service acts as an abstraction for a set of pods that perform the same function. It provides a stable endpoint (IP address and port) to access a set of pods.
+types :-
+ClusterIP
+Nodeport
+Loadbalancer
+
+Ingress:-
+In kubernetes, An Ingress is a collection of rules that allow inbound connections to reach the cluster services.
+
+Namespace:-
+A namespace in kubernetes in kubernetes is a virtual cluster within a physical cluster that allows multiple groups of users to share the same cluster while isolating their resources and policies. It provides a scope for names 
+and a mechanism to attach authorization and policy to a subsection of the cluster.
+Key Feactures of Namespace:-
+Isolation
+Scope for Names
+Authorization
+Resource Quotas
+Initial Namespaces
+
+Pods:-
+A pod is the smallest deployable unit in Kubernetes. It is a group of One or more containers running instance of an application. Pod are ephemeral by nature, meaning
+that if a pod fails, kubernetes can automatically create a new replica of that pod to continue operations
+Key Features of pods:-
+Containers
+shared context
+Ephemeral
+Replication
+Networking
+Lifecycle
+
+Configmaps:-
+Configmaps are used to store non-confidential configuration data in key-value pairs.
+They decouple configuration data from container images, making it easier to manage and update configurations.
+Key features of configmaps
+Separated Configuration from code
+Immutable
+Shareable
+
+Secrets:-
+Secrets are used to store sensitive data, such as passwords, API keys, and other confidential information. They are base64 encoded and stored securely in the kubernetes
+cluster.
+Key Features of secrets;-
+Secure storage 
+Encryption
+Mounted and files or environment variables
+
+ReplicaSet:-
+A replicaset ensures a specified number of identical pods are running at all times. It acts as a unit for managing pod replicas.
+Key features of replicaset
+Scales the number of pods
+
