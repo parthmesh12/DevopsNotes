@@ -63,3 +63,4 @@ A replicaset ensures a specified number of identical pods are running at all tim
 Key features of replicaset
 Scales the number of pods
 
+EKS
