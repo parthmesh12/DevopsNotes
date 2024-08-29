@@ -1,6 +1,7 @@
 what is kubernetes
 Deployment:-
-A deployment ensure that a specified number of pod replicas are running at any given time. It can also be used to roll out updates to applications.
+A deployment ensure that a specified number of pod replicas are running at any given time. 
+It can also be used to roll out updates to applications.
 
 Apiversion:- The version of the kubernetes API to use.
 Kind:- The type of resource deployment.
