@@ -1,0 +1,72 @@
+**1. Why did you use Git?**
+
+Git is a version control tool. 
+I used Git to store source code, track changes, and manage different versions of the code. 
+It also helps team members work together.
+
+---
+
+**2. What is Jenkins?**
+
+Jenkins is a CI/CD automation tool. 
+I used Jenkins to automatically build, test, and deploy applications. 
+It reduces manual work and makes deployment faster.
+
+---
+
+**3. What is Docker?**
+
+Docker is a containerization tool.  
+It packages an application with all required dependencies into a container.  
+It helps run applications easily in different environments.
+
+---
+
+**4. Why did you use Kubernetes?**
+
+Kubernetes is a container orchestration tool. 
+I used Kubernetes to deploy, manage, and scale Docker containers.  
+It also helps in maintaining application availability.
+
+---
+
+**5. What is Terraform?**
+
+Terraform is an Infrastructure as Code tool. 
+I used Terraform to create and manage AWS resources automatically using configuration files.
+
+---
+
+**6. Why did you use AWS EC2?**
+
+EC2 provides virtual servers in the cloud. 
+I used EC2 to host and run my application.
+
+---
+
+**7. What is AWS S3?**
+
+S3 is a storage service in AWS. 
+I used S3 to store files, application data, and backup data.
+
+---
+
+**8. What is Linux?**
+
+Linux is an operating system widely used for servers. 
+I used Linux for managing users, permissions, installing packages, and configuring services like Apache and Tomcat.
+
+---
+
+**9. What is CI/CD?**
+
+CI/CD means Continuous Integration and Continuous Deployment. 
+It helps automate the process of code building, testing, and releasing applications quickly.
+
+---
+
+**10. What was your role in the project?**
+
+My role was to manage the DevOps process. 
+I worked on Git, Jenkins, Docker, Kubernetes, Terraform, AWS, and Linux configuration. 
+I created infrastructure, deployed the application, and managed the deployment process.
