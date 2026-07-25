@@ -1,0 +1,142 @@
+जर तुम्ही AWS Console मधून करणार असाल तर flow असा दिसेल:
+
+Step 1: AWS Login
+
+AWS Management Console मध्ये login करा.
+
+Step 2: VPC Create करा
+
+Menu:
+VPC → Your VPCs → Create VPC
+
+Example:
+
+VPC Name:
+Three-Tier-VPC
+
+IPv4 CIDR:
+10.0.0.0/16
+
+Create केल्यावर VPC तयार होईल.
+
+Step 3: 6 Subnets Create करा
+
+VPC मध्ये जाऊन:
+
+Subnets → Create subnet
+
+तुम्ही 6 subnet तयार कराल:
+
+Public Subnets (Web Tier)
+
+Public-Subnet-1
+10.0.1.0/24
+Availability Zone: ap-south-1a
+
+Public-Subnet-2
+10.0.2.0/24
+Availability Zone: ap-south-1b
+
+Private Subnets (Application Tier)
+
+Private-Subnet-1
+10.0.3.0/24
+
+Private-Subnet-2
+10.0.4.0/24
+
+Database Subnets
+
+DB-Subnet-1
+10.0.5.0/24
+
+DB-Subnet-2
+10.0.6.0/24
+Step 4: Internet Gateway
+
+Create:
+
+Internet Gateway
+        |
+        |
+     Attach to VPC
+
+यामुळे Public subnet ला internet मिळते.
+
+Step 5: Route Table
+
+Public Route Table:
+
+Destination:
+0.0.0.0/0
+
+Target:
+Internet Gateway
+
+Private subnet साठी NAT Gateway वापरू शकता.
+
+Step 6: Security Groups
+
+Create करा:
+
+Load Balancer SG
+
+HTTP 80
+HTTPS 443
+Source: Anywhere
+
+Application SG
+
+Port 8080
+Source: Load Balancer SG
+
+Database SG
+
+Port 3306
+Source: Application SG
+Step 7: EC2 Create करा
+
+आता EC2 create करा.
+
+Example:
+
+Web Server
+Ubuntu
+Public Subnet
+Apache/Tomcat
+Application Server
+Ubuntu
+Private Subnet
+Java Application
+Step 8: RDS Create करा
+
+AWS Console:
+
+RDS → Create Database
+
+Engine:
+MySQL
+
+Subnet Group:
+DB Subnets
+
+Security:
+Database SG
+शेवटी Output:
+
+User browser मध्ये:
+
+https://your-domain.com
+
+किंवा
+
+http://LoadBalancer-DNS
+
+Application open होईल.
+
+पण interview साठी माझा सल्ला:
+पहिल्यांदा AWS Console वर manually करा → screenshots घ्या → नंतर तेच Terraform ने automate करा.
+
+मग तुम्ही interview मध्ये confidently सांगू शकता:
+
+"I first designed the three-tier architecture manually on AWS and then automated the same infrastructure using Terraform."
