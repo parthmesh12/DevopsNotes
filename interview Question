@@ -1,3 +1,34 @@
+ Developer
+            │
+            ▼
+          GitHub
+            │
+     (Code Push)
+            │
+            ▼
+         Jenkins
+     (Build & Deploy)
+            │
+            ▼
+      Docker Image
+            │
+            ▼
+      Kubernetes
+ (Deployment & Service)
+            │
+            ▼
+        AWS EC2
+            │
+            ▼
+ Browser → http://EC2-Public-IP
+            │
+            ▼
+  Welcome to My Java Web Application
+
+
+
+
+
 **1. Why did you use Git?**
 
 Git is a version control tool. 
