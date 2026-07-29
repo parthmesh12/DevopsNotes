@@ -1,1 +1,258 @@
 teraform:-
+
+1. What is Terraform?
+
+English:
+Terraform is an Infrastructure as Code (IaC) tool developed by HashiCorp. 
+It allows you to create, update, and manage infrastructure using configuration files.
+
+Marathi:
+Terraform हे HashiCorp ने विकसित केलेले Infrastructure as Code (IaC) टूल आहे. 
+याच्या मदतीने आपण कोड वापरून सर्व्हर, नेटवर्क आणि क्लाउड रिसोर्सेस तयार व व्यवस्थापित करू शकतो.
+
+2. What is Infrastructure as Code (IaC)?
+
+English:
+Infrastructure as Code means managing infrastructure using code instead of manual configuration.
+
+Marathi:
+Infrastructure as Code म्हणजे Infrastructure मॅन्युअली तयार करण्याऐवजी कोडद्वारे तयार आणि व्यवस्थापित करणे.
+
+3. What are Terraform Providers?
+
+English:
+Providers are plugins that allow Terraform to interact with cloud platforms like AWS, 
+Azure, Google Cloud, Kubernetes, VMware, etc.
+
+Marathi:
+Provider म्हणजे Terraform ला AWS, Azure, GCP, Kubernetes यांसारख्या प्लॅटफॉर्मशी जोडणारे Plugin.
+
+4. What is a Resource?
+
+English:
+A resource is any infrastructure object managed by Terraform, such as an EC2 instance, S3 bucket, or VPC.
+
+Marathi:
+Resource म्हणजे Terraform ने तयार किंवा व्यवस्थापित केलेला Infrastructure Object.
+
+5. What is a Provider Block?
+
+English:
+The provider block specifies which cloud platform Terraform should use.
+
+Example
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+Marathi:
+Provider Block मध्ये Terraform कोणता Cloud Provider वापरणार आहे हे सांगितले जाते.
+
+6. What are Terraform Variables?
+
+English:
+Variables allow you to make your code reusable and configurable.
+
+Marathi:
+Variables वापरून एकाच कोडचा वेगवेगळ्या ठिकाणी पुन्हा वापर करता येतो.
+
+7. What are Outputs?
+
+English:
+Outputs display useful information after Terraform finishes applying the configuration.
+
+Marathi:
+Output म्हणजे Apply झाल्यानंतर मिळणारी माहिती जसे IP Address किंवा Bucket Name.
+
+8. What is Terraform State?
+
+English:
+Terraform State is a file that stores information about the infrastructure Terraform manages.
+
+Marathi:
+Terraform State File मध्ये Infrastructure ची सध्याची माहिती साठवली जाते.
+
+9. What is terraform.tfstate?
+
+English:
+It stores the current state of infrastructure.
+
+Marathi:
+हा Infrastructure चा वर्तमान स्टेट साठवणारा फाइल आहे.
+
+10. Why is Terraform State Important?
+
+English:
+Terraform uses the state file to determine what changes need to be made.
+
+Marathi:
+Terraform कोणते बदल करायचे हे State File वरून ठरवतो.
+
+Important Terraform Commands
+11. terraform init
+
+English:
+Initializes the Terraform project.
+
+Marathi:
+Terraform Project सुरू करण्यासाठी वापरला जातो.
+
+12. terraform plan
+
+English:
+Shows what changes Terraform will make.
+
+Marathi:
+कोणते बदल होणार आहेत ते दाखवतो.
+
+13. terraform apply
+
+English:
+Creates or updates infrastructure.
+
+Marathi:
+Infrastructure तयार किंवा अपडेट करतो.
+
+14. terraform destroy
+
+English:
+Deletes all infrastructure managed by Terraform.
+
+Marathi:
+Terraform ने तयार केलेले सर्व Resources हटवतो.
+
+15. terraform validate
+
+English:
+Checks the syntax of Terraform files.
+
+Marathi:
+Terraform फाइल्सची Syntax तपासतो.
+
+16. terraform fmt
+
+English:
+Formats Terraform code.
+
+Marathi:
+Terraform कोड व्यवस्थित फॉरमॅट करतो.
+
+17. terraform show
+
+English:
+Displays the current state.
+
+Marathi:
+सध्याची Infrastructure माहिती दाखवतो.
+
+18. terraform output
+
+English:
+Displays output values.
+
+Marathi:
+Output Values दाखवतो.
+
+Scenario Questions
+19. Difference between terraform apply and terraform plan?
+
+English:
+
+Plan → Preview changes
+Apply → Execute changes
+
+Marathi:
+
+Plan → बदल आधी दाखवतो.
+Apply → बदल प्रत्यक्ष करतो.
+20. Difference between Count and for_each?
+
+English:
+
+count uses indexes.
+for_each uses keys and is better for maps or sets.
+
+Marathi:
+
+Count मध्ये Index वापरला जातो.
+for_each मध्ये Key वापरली जाते.
+21. What are Modules?
+
+English:
+Modules are reusable Terraform configurations.
+
+Marathi:
+Module म्हणजे पुन्हा वापरता येणारा Terraform Code.
+
+22. What are Workspaces?
+
+English:
+Workspaces allow multiple environments like Dev, Test, and Production.
+
+Marathi:
+Workspace वापरून Dev, Test आणि Production वेगवेगळे ठेवता येतात.
+
+23. What is Remote Backend?
+
+English:
+A remote backend stores the Terraform state in a shared location, such as an S3 bucket.
+
+Marathi:
+Remote Backend मध्ये State File क्लाउडवर साठवला जातो, त्यामुळे टीममधील सर्वजण तो वापरू शकतात.
+
+24. What is State Locking?
+
+English:
+State locking prevents multiple users from modifying the state at the same time.
+
+Marathi:
+एकाच वेळी दोन जण State File बदलू शकत नाहीत यासाठी State Locking वापरले जाते.
+
+25. What are Provisioners?
+
+English:
+Provisioners execute scripts or commands on a resource after it is created.
+
+Marathi:
+Resource तयार झाल्यानंतर Commands किंवा Scripts चालवण्यासाठी Provisioners वापरले जातात.
+
+Real-Time Interview Questions
+Q. Why do companies use Terraform?
+
+English:
+To automate infrastructure, reduce manual errors, improve consistency, and support version control.
+
+Marathi:
+Infrastructure ऑटोमेट करण्यासाठी, मानवी चुका कमी करण्यासाठी, एकसारखी कॉन्फिगरेशन ठेवण्यासाठी आणि Version Control साठी.
+
+Q. Why Terraform instead of CloudFormation?
+
+English:
+Terraform is cloud-agnostic and supports multiple cloud providers, while CloudFormation is specific to AWS.
+
+Marathi:
+Terraform अनेक Cloud Providers साठी वापरता येतो, पण CloudFormation फक्त AWS साठी आहे.
+
+Q. What happens when you run terraform apply?
+
+English:
+Terraform compares the configuration with the current state, 
+creates an execution plan, and then creates, updates, or deletes resources as required.
+
+Marathi:
+Terraform Configuration आणि State File ची तुलना करून आवश्यक Resources तयार, अपडेट किंवा हटवतो.
+
+Common HR Question
+Tell me about your Terraform experience.
+
+English:
+"I have experience using Terraform to automate cloud infrastructure. 
+I have worked with providers such as AWS, created resources like EC2 instances, 
+VPCs, S3 buckets, and IAM roles, managed state files, used modules for reusable code, 
+and followed Infrastructure as Code best practices."
+
+Marathi:
+"मी Terraform वापरून Cloud Infrastructure ऑटोमेट केले आहे. 
+AWS Provider वापरून EC2, VPC, S3 Bucket, IAM Roles तयार केले आहेत. 
+State Files व्यवस्थापित केले, Modules वापरले आणि Infrastructure as Code च्या सर्वोत्तम पद्धतींचे पालन केले."
