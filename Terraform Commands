@@ -1,0 +1,24 @@
+| Command                           | Purpose (English)                                                          | मराठी अर्थ                                                |
+| --------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `terraform version`               | Shows Terraform version                                                    | Terraform ची आवृत्ती (Version) दाखवते                     |
+| `terraform init`                  | Initializes the Terraform project                                          | प्रोजेक्ट सुरू करून आवश्यक Provider डाउनलोड करतो          |
+| `terraform validate`              | Validates the configuration                                                | Terraform फाइल्सची Syntax तपासतो                          |
+| `terraform fmt`                   | Formats configuration files                                                | कोड योग्य Format मध्ये आणतो                               |
+| `terraform plan`                  | Shows execution plan                                                       | कोणते बदल होणार आहेत ते दाखवतो                            |
+| `terraform apply`                 | Creates or updates infrastructure                                          | Infrastructure तयार किंवा अपडेट करतो                      |
+| `terraform destroy`               | Deletes managed infrastructure                                             | Terraform ने तयार केलेले सर्व Resources हटवतो             |
+| `terraform show`                  | Displays current state details                                             | State ची माहिती दाखवतो                                    |
+| `terraform output`                | Displays output values                                                     | Output Values दाखवतो                                      |
+| `terraform state list`            | Lists all resources in the state                                           | State मधील सर्व Resources दाखवतो                          |
+| `terraform state show <resource>` | Shows details of a resource                                                | एखाद्या Resource ची माहिती दाखवतो                         |
+| `terraform state rm <resource>`   | Removes a resource from state                                              | State मधून Resource काढतो (Resource delete होत नाही)      |
+| `terraform import`                | Imports existing infrastructure                                            | आधीपासून असलेला Resource Terraform मध्ये आणतो             |
+| `terraform taint <resource>`      | Marks a resource for recreation (legacy command)                           | Resource पुन्हा तयार करण्यासाठी चिन्हांकित करतो           |
+| `terraform untaint <resource>`    | Removes the taint from a resource (legacy command)                         | Taint काढतो                                               |
+| `terraform workspace list`        | Lists all workspaces                                                       | सर्व Workspaces दाखवतो                                    |
+| `terraform workspace new dev`     | Creates a new workspace                                                    | नवीन Workspace तयार करतो                                  |
+| `terraform workspace select dev`  | Switches to another workspace                                              | दुसऱ्या Workspace मध्ये जातो                              |
+| `terraform workspace delete dev`  | Deletes a workspace                                                        | Workspace हटवतो                                           |
+| `terraform refresh`               | Updates the state with real infrastructure (deprecated in newer workflows) | State अपडेट करतो (आधुनिक Terraform मध्ये कमी वापरला जातो) |
+| `terraform providers`             | Lists providers used                                                       | वापरलेले Providers दाखवतो                                 |
+| `terraform graph`                 | Generates dependency graph                                                 | Resource Dependency Graph तयार करतो                       |
