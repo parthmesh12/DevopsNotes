@@ -22,3 +22,42 @@
 | `terraform refresh`               | Updates the state with real infrastructure (deprecated in newer workflows) | State अपडेट करतो (आधुनिक Terraform मध्ये कमी वापरला जातो) |
 | `terraform providers`             | Lists providers used                                                       | वापरलेले Providers दाखवतो                                 |
 | `terraform graph`                 | Generates dependency graph                                                 | Resource Dependency Graph तयार करतो                       |
+
+
+
+Most Frequently Asked Interview Commands
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+terraform validate
+terraform fmt
+terraform output
+terraform show
+terraform import
+terraform workspace
+
+
+Explain the Terraform workflow.
+
+Answer (English):
+
+Write Terraform configuration (.tf files).
+Run terraform init to initialize the project.
+Run terraform validate to check the configuration.
+Run terraform fmt to format the code.
+Run terraform plan to preview changes.
+Run terraform apply to create or update infrastructure.
+Run terraform output to view output values.
+Run terraform destroy to remove infrastructure when no longer needed.
+
+मराठी:
+
+.tf फाइलमध्ये कोड लिहा.
+terraform init चालवा.
+terraform validate ने Syntax तपासा.
+terraform fmt ने कोड Format करा.
+terraform plan ने होणारे बदल पाहा.
+terraform apply ने Infrastructure तयार करा.
+terraform output ने Outputs पाहा.
+गरज संपल्यावर terraform destroy ने Resources हटवा.
