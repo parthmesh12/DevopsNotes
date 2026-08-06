@@ -140,3 +140,36 @@ Application open होईल.
 मग तुम्ही interview मध्ये confidently सांगू शकता:
 
 "I first designed the three-tier architecture manually on AWS and then automated the same infrastructure using Terraform."
+
+
+
+| **AWS VPC**                         | A Virtual Private Cloud is a private network inside AWS where you create and manage your cloud resources securely. 
+                                      | **VPC** म्हणजे AWS मधील तुमचे स्वतःचे private network, ज्यामध्ये तुम्ही EC2, RDS आणि इतर resources सुरक्षितपणे ठेवता.                     |
+| **Public Subnet**                   | A subnet that has internet access through an Internet Gateway.                                                     
+                                      | **Public Subnet** म्हणजे इंटरनेटशी थेट जोडलेले subnet. यात ALB, Bastion Host सारखे resources ठेवतात.                                      |
+| **Private Subnet**                  | A subnet that does not have direct internet access.                                                                 
+                                      | **Private Subnet** म्हणजे इंटरनेटशी थेट जोडलेले नसलेले subnet. यात EC2, RDS सारखे secure resources ठेवतात.                                |
+| **Internet Gateway (IGW)**          | A gateway that allows communication between your VPC and the internet.                                              
+                                      | **Internet Gateway** VPC ला इंटरनेटशी जोडते.                                                                                              |
+| **NAT Gateway**                     | Allows resources in private subnets to access the internet without allowing inbound internet traffic.              
+                                      | **NAT Gateway** मुळे Private Subnet मधील EC2 बाहेरच्या इंटरनेटवर जाऊ शकते (उदा. updates), पण इंटरनेटवरून कोणी थेट EC2 मध्ये येऊ शकत नाही. |
+| **Route Tables**                    | Define how network traffic is routed inside the VPC.                                                               
+                                      | **Route Table** ठरवते की network traffic कुठे पाठवायचा.                                                                                   |
+| **Security Groups**                 | Virtual firewalls that control inbound and outbound traffic for AWS resources.                                     
+                                      | **Security Group** म्हणजे Virtual Firewall. कोणते ports open ठेवायचे हे यात ठरवले जाते.                                                   |
+| **EC2**                             | Amazon Elastic Compute Cloud provides virtual servers to run applications.                                         
+                                      | **EC2** म्हणजे AWS मधील Virtual Machine (Server).                                                                                         |
+| **Application Load Balancer (ALB)** | Distributes incoming application traffic across multiple EC2 instances.                                            
+                                      | **ALB** येणारा traffic अनेक EC2 servers मध्ये समान वाटतो, त्यामुळे एकाच server वर जास्त load येत नाही.                                    |
+| **Auto Scaling Group (ASG)**        | Automatically increases or decreases the number of EC2 instances based on demand.                                  
+                                      | **Auto Scaling** गरजेनुसार EC2 instances आपोआप वाढवते किंवा कमी करते.                                                                     |
+| **RDS MySQL**                       | AWS managed relational database service using MySQL.                                                               
+                                      | **RDS MySQL** म्हणजे AWS ची managed MySQL database सेवा. AWS backups, patching आणि maintenance सांभाळते.                                  |
+| **Terraform**                       | Infrastructure as Code (IaC) tool used to create and manage cloud infrastructure using code.                       
+                                      | **Terraform** म्हणजे code वापरून AWS infrastructure तयार आणि manage करण्याचे tool.                                                        |
+| **Git**                             | A version control system used to track code changes.                                                               
+                                      | **Git** code मधील बदल track करण्यासाठी वापरले जाणारे Version Control System आहे.                                                          |
+| **GitHub**                          | A cloud platform to store Git repositories and collaborate with others.                                            
+                                      | **GitHub** Git repositories online store आणि team सोबत collaborate करण्यासाठी platform आहे.                                               |
+
+
