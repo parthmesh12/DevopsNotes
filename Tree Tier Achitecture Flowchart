@@ -1,0 +1,79 @@
+# AWS Three-Tier Architecture
+
+## Technologies Used
+- AWS EC2
+- VPC
+- Public & Private Subnets
+- Internet Gateway
+- NAT Gateway
+- Application Load Balancer
+- Auto Scaling
+- RDS MySQL
+- Security Groups
+- Terraform
+- Docker
+- Git
+
+## Architecture
+
+Client
+↓
+Application Load Balancer
+↓
+EC2 Auto Scaling Group
+↓
+RDS MySQL
+
+## Deployment
+
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+
+## Author
+
+Your Name
+
+
+
+aws-three-tier-architecture/
+│
+├── README.md
+├── architecture-diagram.png
+├── terraform/
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── vpc.tf
+│   ├── subnet.tf
+│   ├── security-group.tf
+│   ├── ec2.tf
+│   ├── alb.tf
+│   ├── rds.tf
+│   ├── outputs.tf
+│   └── terraform.tfvars
+│
+├── app/
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── application/
+│
+├── scripts/
+│   ├── install-nginx.sh
+│   └── userdata.sh
+│
+└── .gitignore
+
+Git Command For Project:
+git init
+
+git add .
+
+git commit -m "Initial commit - AWS Three Tier Architecture"
+
+git branch -M main
+
+git remote add origin https://github.com/username/aws-three-tier-architecture.git
+
+git push -u origin main
